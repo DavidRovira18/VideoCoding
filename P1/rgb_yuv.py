@@ -279,6 +279,6 @@ def menu_dct_inverse(dct, data=""):
     inverse_dct = dct.inverse_dct(data)
     print("DCT decoding result: ", inverse_dct)
 
-
-# APP
-run_app()
+if __name__ == "__main__":
+    # APP
+    run_app()
