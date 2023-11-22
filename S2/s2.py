@@ -1,7 +1,7 @@
 import subprocess
 import os
 from yuv_histogram import extract_yuv_hist, package_video_hist
-
+from subtitles import integrate_subtitles
 
 def ffmpeg_command(
         commands):  # Executes a ffmpeg command when using a Python WSL interpreter
@@ -85,3 +85,6 @@ if __name__ == "__main__":
 
     if not os.path.exists("BigBuckBunny_trim_hist_overlay.mpeg"):
         package_video_hist("BigBuckBunny_trim.mpeg")
+
+    if not os.path.exists("BigBuckBunny_trim_srt.mpeg") and os.path.exists("subtitles.srt"):
+        integrate_subtitles("BigBuckBunny_trim.mpeg", "subtitles.srt")

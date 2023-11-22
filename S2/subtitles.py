@@ -1,5 +1,4 @@
 import subprocess
-from tkinter import filedialog
 
 
 def ffmpeg_command(
@@ -19,3 +18,8 @@ def ffmpeg_command(
         print(f"OUTPUT ERROR: {e.stderr}")
         return
 
+def integrate_subtitles(video_file, subtitles_file): # Adds subtitles to the desired video file
+    output_file = video_file.split(".")[0]
+    output_file += "_srt.mpeg"
+    cmd = ["-i", video_file, "-vf", f"subtitles={subtitles_file}", output_file]
+    ffmpeg_command(cmd)

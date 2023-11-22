@@ -1,0 +1,15 @@
+1
+00:00:0,000 --> 00:00:2,000
+Hello! I am David Rovira
+
+2
+00:00:2,000 --> 00:00:4,000
+These are the subtitles for
+
+3
+00:00:4,000 --> 00:00:7,000
+BigBuckBunny trimmed video
+
+4
+00:00:7,000 --> 00:00:10,000
+Peace out :)
